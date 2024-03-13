@@ -1,5 +1,5 @@
 {% set name = "openhsi" %}
-{% set version = "0.3.0" %}
+{% set version = "0.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/openhsi-{{ version }}.tar.gz
-  sha256: a8be3d6e457dcb8d6b303718b9bdb0814d2d48426f0259238db4d4a1fff6ae3c
+  sha256: 33f9761eb035e7d634fa4f4b830cd058a84b452135b0b9cc961b8488f6f70cb9
 
 build:
   noarch: python
