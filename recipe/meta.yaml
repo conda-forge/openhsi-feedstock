@@ -1,5 +1,5 @@
 {% set name = "openhsi" %}
-{% set version = "0.3.1" %}
+{% set version = "0.3.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/openhsi-{{ version }}.tar.gz
-  sha256: 33f9761eb035e7d634fa4f4b830cd058a84b452135b0b9cc961b8488f6f70cb9
+  sha256: 35a60315623ef49e6d3a4d094bc2b302df0e9cfc32f0b94b44b9edb091f63f1c
 
 build:
   noarch: python
@@ -17,7 +17,7 @@ build:
 requirements:
   host:
     - pip
-    - python == 3.8
+    - python ==3.8
   run:
     - bokeh
     - datashader
