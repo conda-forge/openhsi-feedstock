@@ -6,18 +6,18 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/openhsi-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/openhsi-{{ version }}.tar.gz
   sha256: 35a60315623ef49e6d3a4d094bc2b302df0e9cfc32f0b94b44b9edb091f63f1c
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python ==3.8
+    - python {{ python_min }}
   run:
     - bokeh
     - datashader
@@ -38,7 +38,7 @@ requirements:
     - psutil
     - py6s
     - pyserial
-    - python >=3.7
+    - python >={{ python_min }}
     - pyviz_comms
     - requests <=2.24.0
     - scipy
@@ -53,6 +53,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/openhsi/openhsi/tree/master/
