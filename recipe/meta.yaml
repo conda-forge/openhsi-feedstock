@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -28,9 +28,9 @@ requirements:
     - hvplot
     - matplotlib-base
     - netcdf4
-    - numpy >=1.23.1
+    - numpy
     - packaging
-    - pandas <2.0.0
+    - pandas
     - panel
     - param
     - pillow
@@ -40,11 +40,11 @@ requirements:
     - pyserial
     - python >={{ python_min }}
     - pyviz_comms
-    - requests <=2.24.0
+    - requests
     - scipy
     - streamz
     - tqdm
-    - xarray ==2022.3.0
+    - xarray
 
 test:
   imports:
